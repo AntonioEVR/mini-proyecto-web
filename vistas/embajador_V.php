@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,11 +11,13 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+
 </head>
 <body class="bg-light">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-4 shadow-sm">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="../vistas/inicio.html">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../vistas/inicio_V.php">
         🌊 <strong>BlueWave</strong>
     </a>
 </nav>
@@ -27,13 +33,15 @@
             </div>
 
             <div class="card border-primary border-2 shadow p-4 p-md-5">
+                <!--FORMULARIO-->
                 <form action="../controladores/embajador.php" method="post">
                     
                     <h5 class="text-primary border-bottom pb-2 mb-4">1. Datos de Acción</h5>
                     
                     <div class="mb-4">
+                        <!--COSTA PRINCIPAL-->
                         <label for="zona_costera" class="form-label fw-bold">Tu costa principal</label>
-                        <select id="zona_costera" name="zona_costera" class="form-select" required>
+                        <select id="zona_costera" name="zona_costera" class="form-select">
                             <option value="" disabled selected>Selecciona una zona...</option>
                             <option value="costa_brava">Costa Brava</option>
                             <option value="costa_blanca">Costa Blanca</option>
@@ -46,6 +54,7 @@
                     <h5 class="text-primary border-bottom pb-2 mb-4 mt-5">2. Compromiso Económico</h5>
 
                     <div class="mb-4">
+                        <!--CUOTA MENSUAL-->
                         <label class="form-label fw-bold">Cuota mensual de Embajador</label>
                         <div class="p-3 bg-primary bg-opacity-10 border border-primary rounded d-flex justify-content-between align-items-center">
                             <span>Suscripción "Blue Heart"</span>
@@ -56,13 +65,15 @@
                     </div>
 
                     <div class="mb-4">
+                        <!--CUENTA BANCARIA-->
                         <label for="iban" class="form-label fw-bold">Cuenta Bancaria (IBAN)</label>
-                        <input type="text" id="iban" name="iban" class="form-control" maxlength="24" placeholder="ES00 0000..." required>
+                        <input type="text" id="iban" name="iban" class="form-control" maxlength="24" placeholder="ES00 0000...">
                     </div>
 
                     <h5 class="text-primary border-bottom pb-2 mb-4 mt-5">3. Difusión y Comunidad</h5>
 
                     <div class="mb-4">
+                        <!--NOMBRE USUARIO INSTAGRAM/TIK TOK-->
                         <label for="redes" class="form-label fw-bold">Usuario de Instagram / TikTok</label>
                         <div class="input-group">
                             <span class="input-group-text">@</span>
@@ -72,6 +83,7 @@
                     </div>
 
                     <div class="mb-4">
+                        <!--MOTIVACIONES-->
                         <label for="motivacion" class="form-label fw-bold">¿Por qué quieres ser embajador?</label>
                         <textarea id="motivacion" name="motivacion" class="form-control" rows="3" placeholder="Cuéntanos brevemente tu motivación..."></textarea>
                     </div>
@@ -94,6 +106,30 @@
         </div>
     </div>
 </main>
+
+<?php
+
+
+if (!empty($_SESSION['error_embajador'])) {
+    echo "<h1 style = 'color:red'>ERRORES</h1><ul>";
+        foreach($_SESSION['error_embajador'] as $error) {
+            echo "<li>$error</li>";
+    }
+    echo "</ul>";
+    unset($_SESSION['error_embajador']);
+    unset($_SESSION['guardado_embajador']);
+}
+
+if (!empty($_SESSION['guardado_embajador'])) {
+    echo "<h1 style = 'color:green'>ENHORABUENA</h1><ul>";
+        foreach($_SESSION['guardado_embajador'] as $mensaje) {
+            echo "<li>$mensaje</li>";
+    }
+    echo "</ul>";
+    unset($_SESSION['guardado_embajador']);
+}
+
+?>
 
 <footer class="bg-dark text-white text-center py-4 mt-5">
     <p class="mb-0 small">© 2026 BlueWave · Todos los derechos reservados</p>

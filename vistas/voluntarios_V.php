@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+
     <style>
         .full-height {
             min-height: 80vh;
@@ -21,7 +23,7 @@
 <body class="bg-light">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-4 shadow-sm">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="../vistas/inicio.html">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../vistas/inicio_V.php">
         🌊 <strong>BlueWave</strong>
     </a>
 </nav>
@@ -63,7 +65,7 @@
                         <div class="display-1 mb-3">⭐</div>
                         <h3 class="card-title fw-bold">Embajador BlueWave</h3>
                         <p class="card-text">La ayuda total: vienes a las playas y además apoyas la causa mensualmente.</p>
-                        <a href="../vistas/embajdor_V.php" class="btn btn-light stretched-link mt-3 text-primary fw-bold">¡Quiero ser Embajador!</a>
+                        <a href="../vistas/embajador_V.php" class="btn btn-light stretched-link mt-3 text-primary fw-bold">¡Quiero ser Embajador!</a>
                     </div>
                 </div>
             </div>

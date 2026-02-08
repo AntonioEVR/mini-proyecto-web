@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,11 +11,13 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+
 </head>
 <body class="bg-light">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-4 shadow-sm">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="../vistas/inicio.html">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../vistas/inicio_V.php">
         🌊 <strong>BlueWave</strong>
     </a>
 </nav>
@@ -26,14 +32,16 @@
             </div>
 
             <div class="card border-0 shadow-sm p-4 p-md-5">
+                <!--FORMUALRIO-->
                 <form action="../controladores/socio.php" method="post">
-                    
+                    <!--DNI/NIE-->
                     <div class="mb-4">
                         <label for="dni" class="form-label fw-bold">DNI / NIE</label>
-                        <input type="text" class="form-control" id="dni" name="dni" placeholder="12345678X" required>
+                        <input type="text" class="form-control" id="dni" name="dni" placeholder="12345678X">
                         <div class="form-text small">Necesario para el certificado de donaciones.</div>
                     </div>
 
+                    <!--IMPORTE-->
                     <div class="mb-4">
                         <label class="form-label fw-bold">Importe de la cuota</label>
                         <div class="row g-2">
@@ -51,23 +59,26 @@
                         </div>
                     </div>
 
+                    <!--PERIODICIDAD-->
                     <div class="mb-4">
                         <label for="periodicidad" class="form-label fw-bold">Periodicidad</label>
-                        <select id="periodicidad" name="periodicidad" class="form-select" required>
+                        <select id="periodicidad" name="periodicidad" class="form-select">
                             <option value="mensual">Mensual</option>
                             <option value="trimestral">Trimestral</option>
                             <option value="anual">Anual</option>
                         </select>
                     </div>
 
+                    <!--CUENTA BANCARIA (IBAN)-->
                     <div class="mb-4">
                         <label for="iban" class="form-label fw-bold">Cuenta Bancaria (IBAN)</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="bi bi-credit-card"></i></span>
-                            <input type="text" id="iban" name="iban" class="form-control" placeholder="ES00 0000 0000 0000..." maxlength="24" required>
+                            <input type="text" id="iban" name="iban" class="form-control" placeholder="ES00 0000 0000 0000..." maxlength="24">
                         </div>
                     </div>
 
+                    <!--BOTÓN DE CONFIRMACIÓN-->
                     <div class="d-grid gap-2 mt-5">
                         <button type="submit" class="btn btn-primary btn-lg fw-bold">
                             CONFIRMAR COLABORACIÓN
@@ -86,6 +97,29 @@
         </div>
     </div>
 </main>
+
+<?php
+
+if (!empty($_SESSION['error_socio'])) {
+    echo "<h1 style = 'color:red'>ERRORES</h1><ul>";
+        foreach($_SESSION['error_socio'] as $error) {
+            echo "<li>$error</li>";
+    }
+    echo "</ul>";
+    unset($_SESSION['error_socio']);
+    unset($_SESSION['guardado_socio']);
+}
+
+if (!empty($_SESSION['guardado_socio'])) {
+    echo "<h1 style = 'color:green'>ENHORABUENA</h1><ul>";
+        foreach($_SESSION['guardado_socio'] as $mensaje) {
+            echo "<li>$mensaje</li>";
+    }
+    echo "</ul>";
+    unset($_SESSION['guardado_socio']);
+}
+
+?>
 
 <footer class="bg-dark text-white text-center py-4 mt-5">
     <p class="mb-0 small">© 2026 BlueWave · Todos los derechos reservados</p>

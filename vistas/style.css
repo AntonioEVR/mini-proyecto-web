@@ -1,0 +1,209 @@
+/*---------REGISTRO---------*/
+body{
+    background-image: url("fondo.jpg");
+    background-size: 100%;
+}
+
+/* Estilo del formulario */
+form {
+    background-color: rgba(255, 255, 255, 0.5);
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titulo */
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+   
+}
+
+/* texto */
+.texto{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+
+.textoPassword{
+    
+    margin-top: 0px;
+    color: #000000;
+}
+
+/* Casillas*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    
+}
+
+/*Estilo en la casilla cuando escriba */
+input:focus,
+select:focus {
+    outline: none; /* quita el predeterminado */
+    border: 2px solid #3948ce;
+}
+
+/* Botón de envío */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #596aff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.mensaje{
+    color: #323232;
+    text-align: center;
+}
+
+.mensajeCorrecto{
+    color: #222222;
+    text-align: center;
+}
+
+/*---------INICIO DE SESION---------*/
+
+body{
+    background-image: url("fondo.jpg");
+    background-size: 100%;
+}
+
+/* Estilo del formulario */
+form {
+    background-color: rgba(255, 255, 255, 0.5);
+    
+    max-width: 500px;
+    margin: 100px auto 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Titulo */
+h1{
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+   
+}
+
+/* texto */
+.texto{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #000000;
+
+}
+
+h3{
+    color: #000000;
+}
+
+/* Casillas*/
+input[type="email"],
+input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    
+}
+
+/*Estilo en la casilla cuando escriba */
+input:focus,
+select:focus {
+    outline: none; /* quita el predeterminado */
+    border: 2px solid #3948ce;
+}
+
+/* Botón de envío */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #596aff;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/*---------ACCESO INVALIDO---------*/
+
+/* Fondo general similar a tus páginas */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor centrado */
+.acceso-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Tarjeta de mensaje */
+.acceso-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+}
+
+/* Titulo */
+.acceso-card h1 {
+    color: #d9534f; /* rojo suave para advertencia */
+    margin-bottom: 20px;
+}
+
+/* Texto */
+.acceso-card p {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Botón volver al inicio */
+.btn-acceso {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #596aff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-acceso:hover {
+    background-color: #4954d4;
+}
