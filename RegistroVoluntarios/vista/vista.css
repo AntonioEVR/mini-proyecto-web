@@ -1,0 +1,82 @@
+body{
+    background-image: url("fondo.jpg");
+    background-size: 100%;
+}
+
+/* Estilo del formulario */
+form {
+    background-color: rgba(255, 255, 255, 0.5);
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titulo */
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+   
+}
+
+/* texto */
+.texto{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+
+.textoPassword{
+    
+    margin-top: 0px;
+    color: #000000;
+}
+
+/* Casillas*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    
+}
+
+/*Estilo en la casilla cuando escriba */
+input:focus,
+select:focus {
+    outline: none; /* quita el predeterminado */
+    border: 2px solid #3948ce;
+}
+
+/* Botón de envío */
+button[type="submit"] {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #596aff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.mensaje{
+    color: #323232;
+    text-align: center;
+}
+
+.mensajeCorrecto{
+    color: #222222;
+    text-align: center;
+}
+
