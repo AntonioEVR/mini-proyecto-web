@@ -1,0 +1,82 @@
+/* Reset básico */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+
+    background-image: url("../imagenes/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Formulario */
+form {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+/* Títulos */
+h1{
+    text-align: center;
+}
+ h3 {
+    margin: 15px 0;
+}
+
+.texto{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+input[type="email"],
+input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Focus */
+input:focus{
+    outline: none;
+    border: 2px solid #3948ce;
+}
+
+/* Botón */
+button{
+    width: 100%;
+    padding: 12px;
+    background-color: #596aff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Mensajes */
+.mensaje{
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+
+}
+
+/* Registro */
+.registro{
+    text-align: center;
+
+}

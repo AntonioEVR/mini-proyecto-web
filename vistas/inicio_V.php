@@ -7,17 +7,21 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <
+<link href="inicio_V_eventos.css" rel="stylesheet"> 
+
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary px-4 shadow-sm">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary px-4 shadow-sm fixed-top">
     <a class="navbar-brand d-flex align-items-center gap-2" href="../vistas/inicio_V.php">
         🌊 <strong>BlueWave</strong>
     </a>
 
     <div class="ms-auto">
-        <a href="#" class="btn btn-outline-light me-2 btn-sm">Iniciar sesión</a>
-        <a href="#" class="btn btn-light btn-sm">Registrarse</a>
+        <a href="inicioSesion.php" class="btn btn-outline-light me-2 btn-sm">Iniciar sesión</a>
+        <a href="registro.php" class="btn btn-light btn-sm">Registrarse</a>
     </div>
 </nav>
 
@@ -95,42 +99,129 @@
         </div>
     </div>
 </section>
-
 <section class="container my-5 py-5">
-    <h2 class="text-center text-primary mb-5 fw-bold">Calendario de Brigadas</h2>
-    <div class="table-responsive shadow-sm rounded">
-        <table class="table table-hover align-middle mb-0">
-            <thead class="table-primary text-center">
-                <tr>
-                    <th class="py-3">Fecha</th>
-                    <th class="py-3">Evento</th>
-                    <th class="py-3">Lugar</th>
-                    <th class="py-3">Estado</th>
-                </tr>
-            </thead>
-            <tbody class="text-center">
-                <tr>
-                    <td class="fw-bold">15 Mar 2026</td>
-                    <td>Limpieza Microplásticos</td>
-                    <td>Playa Norte</td>
-                    <td><span class="badge bg-success">Abierto</span></td>
-                </tr>
-                <tr>
-                    <td class="fw-bold">02 Abr 2026</td>
-                    <td>Jornada de Voluntariado</td>
-                    <td>Playa Azul</td>
-                    <td><span class="badge bg-success">Abierto</span></td>
-                </tr>
-                <tr>
-                    <td class="fw-bold">20 Abr 2026</td>
-                    <td>Recogida de Residuos</td>
-                    <td>Playa Central</td>
-                    <td><span class="badge bg-warning text-dark">Últimas plazas</span></td>
-                </tr>
-            </tbody>
-        </table>
+    <h2 class="text-center text-primary mb-5 fw-bold">Próximos Eventos</h2>
+
+    <div id="eventosCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <!-- SLIDE 1 -->
+            <div class="carousel-item active">
+                <div class="d-flex flex-wrap justify-content-center gap-4 evento-custom">
+
+
+                    <!-- CASILLA 1 -->
+                    <div class="casillas">
+                        <div class="fecha">feb, 23</div>
+                        <div class="categoria"><p>Limpieza</p></div>
+                        <img src="../imagenes/eventos/limpieza1.jpg">
+                        <h4>Limpieza costa de Vejer</h4>
+                        <h5>Limpieza de vertidos fecales de la costa. (Se entregará equipo especializado)</h5>
+                        <h5>📆 Lunes, 23 de febrero</h5>
+                        <h5>🕓 10:00h</h5>
+                        <h5>📍 Vejer, Cádiz</h5>
+                        
+                    </div>
+
+                    <!-- CASILLA 2 -->
+                   <div class='casillas'>
+                    <div class='limpieza1'>
+                        <div class='fecha'>marz, 6</div>
+                        <div class='categoria'><p>Familiar</p></div>
+                        <img src='../imagenes/eventos/familia1.jpg'>
+                        <h4>Liempieza Playa La Antilla</h3>
+                        <h5>Jornada de limpieza para toda la familia.</h5>
+                        <h5>📆 Viernes, 6 de marzo</h5>
+                        <h5>🕓 15:00h</h5>
+                        <h5>📍 La Antilla, Huelva</h5>
+                    </div>
+                </div>
+
+                    <!-- CASILLA 3 -->
+                    <div class='casillas'>
+                    <div class='limpieza1'>
+                        <div class='fecha'>marz, 11</div>
+                        <div class='categoria'><p>Limpieza</p></div>
+                        <img src='../imagenes/eventos/limpieza3.jpg'>
+                        <h4>Costa de Trafalgar</h3>
+                        <h5>Jornada de limpieza de la playa de nuestra sede</h5>
+                        <h5>📆 Miercoles, 11 de marzo</h5>
+                        <h5>🕓 10:00h</h5>
+                        <h5>📍 Trafalgar, Cádiz.</h5>           
+                    </div>
+                </div>
+
+                </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center gap-4 evento-custom">
+
+                    <!-- CASILLA 4 -->
+                    <div class='casillas'>
+                    <div class='Educación'>
+                        <div class='fecha'>marz, 13</div>
+                        <div class='categoria'><p>Educación</p></div>
+                        <img src='../imagenes/eventos/charla1.jpg'>
+                        <h4>Charla: El problema del plástico</h3>
+                        <h5>Conferencia online sobre el impacto del plástico en las playas.</h5>
+                        <h5>📆 viernes, 13 de marzo</h5>
+                        <h5>🕓 18:00h</h5>
+                        <h5>📍 Online</h5>
+                    </div>
+                </div>
+
+                    <!-- CASILLA 5 -->
+                <div class='casillas'>
+                    <div class='taller'>
+                        <div class='fecha'>marz, 26</div>
+                        <div class='categoria'><p>Taller</p></div>
+                        <img src='../imagenes/eventos/taller1.jpg'>
+                        <h4>Taller informativo de reciclaje</h3>
+                        <h5>Taller de reciclaje, separación de residuos y puntos limpios</h5>
+                        <h5>📆 Jueves, 26 de marzo</h5>
+                        <h5>🕓 17:00h</h5>
+                        <h5>📍 I.E.S La Arboleda,Lepe</h5>
+                    </div>
+                </div>
+
+                <!-- CASILLA 6 -->
+                    <div class='casillas'>
+                    <div class='limpieza1'>
+                        <div class='fecha'>marz, 31</div>
+                        <div class='categoria'><p>Limpieza</p></div>
+                        <img src='../imagenes/eventos/limpieza2.jpg'>
+                        <h4>Liempieza Playa Algarrobico</h3>
+                        <h5>Limpieza de la costa de Almería</h5>
+                        <h5>📆 Martes, 31 de marzo</h5>
+                        <h5>🕓 13:00h</h5>
+                        <h5>📍 Algarrobico, Almería</h5>
+                        
+                    </div>
+                </div>
+                    <!-- Puedes añadir más casillas aquí si quieres -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CONTROLES -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#eventosCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#eventosCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <div class="d-flex justify-content-center align-items-center" >
+    <a href="eventos.php">
+        <button class="boton">Ver todos los eventos</button>
+    </a>
     </div>
 </section>
+
 
 <section class="bg-primary text-white text-center py-5 shadow-lg">
     <div class="container py-3">

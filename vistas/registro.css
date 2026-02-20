@@ -1,7 +1,12 @@
 body{
-    background-image: url("fondo.jpg");
-    background-size: 100%;
+    margin: 0;
+    background-image: url("../imagenes/fondo.jpg");
+    background-size: cover;        
+    background-position: center;  
+    background-repeat: no-repeat;  
+    min-height: 100vh;             
 }
+
 
 /* Estilo del formulario */
 form {
@@ -80,3 +85,6 @@ button[type="submit"] {
     text-align: center;
 }
 
+p{
+    text-align: center;
+}
